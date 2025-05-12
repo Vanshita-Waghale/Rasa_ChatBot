@@ -1,0 +1,21 @@
+version: "2.0"
+
+rules:
+  # Rule 1: Start conversation
+  - rule: Start conversation
+    steps:
+      - intent: start
+      - action: utter_start
+
+  # Rule 3: Say goodbye when the user says goodbye
+  - rule: Say goodbye on user goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Rule 4: Respond to bot challenge
+  - rule: Respond to bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+

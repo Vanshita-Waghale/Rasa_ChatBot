@@ -1,0 +1,22 @@
+GameCategory,GameTitle,Source,mood,cluster_predicted
+Puzzle,Sudoku,https://sudoku.com/,bored,3
+Puzzle,Mahjong,https://mahjon.gg/,happy,4
+Puzzle,Crossword,https://www.boatloadpuzzles.com/playcros,sad,2
+Puzzle,Minesweeper,minesweeperonline.com,happy,1
+Puzzle,Memory Match,https://www.mathsisfun.com/games/,happy,1
+Puzzle,Tetris,https://tetris.com/play-tetris,bored,3
+Puzzle,2048,https://play2048.co/,bored,5
+Puzzle,Jigsaw Puzzles,https://www.jigsawplanet.com/,happy,1
+Strategy,Tic-Tac-Toe,https://playtictactoe.org/,sad,0
+Strategy,Chess,https://www.chess.com/,sad,2
+Strategy,Checkers,https://toytheater.com/checkers/,sad,2
+Adventure,Snake,https://snake.io/,bored,3
+Adventure,Bubble Shooter,https://www.bubbleshooter.net/,sad,2
+Adventure,Ludo King,https://www.crazygames.com/game/ludo-king,happy,1
+Adventure,Pac-Man,https://www.pacman1.net/,happy,1
+Adventure,Pinball,https://playpager.com/pinball-online/,happy,4
+Card,Spider Solitaire,https://solitaired.com/spider-solitaire,bored,3
+Card,Poker,https://www.247freepoker.com/,bored,3
+Word,Word Association,https://humanbraincloud.com/,sad,0
+Word,Word Scramble,https://play.dictionary.com/games/wo,sad,0
+Word,Hangman,https://poki.com/en/g/hangman,bored,5

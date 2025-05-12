@@ -1,0 +1,528 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- start
+- deny
+- suggest_hobbies
+- music
+- tamil
+- signin
+- hobby_painting_drawing
+- hindi
+- nlu_fallback
+- mood_bored
+- marathi
+- greet
+- mood_happy
+- show_recommendation
+- mood_sad
+- mood_great
+- signup
+- affirm
+- goodbye
+- mood
+- mood_unhappy
+- bot_challenge
+- mood_bore
+- hobby_reading
+- hobby_singing
+- hobby_dancing
+- hobby_travelling
+- hobby_nature_gardening
+- hobby_cooking_baking
+- hobby_other
+- game_category
+- music_category
+- movie_category
+- puzzle
+- strategy
+- adventure
+- word
+- card
+- punjabi
+- english
+- classical_music_old
+- classical_music_new
+- romantic_music_old
+- romantic_music_new
+- road_trip_music_old
+- road_trip_music_new
+- dance_music_old
+- dance_music_new
+- sad_music_old
+- sad_music_new
+- drama
+- thriller
+- musical
+- family
+- horror
+- comedy
+- medical_condition_recommend
+- family_recommend
+- pet_recommend
+- feedback
+
+entities:
+- music_language
+- password
+- username
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  username:
+    type: text
+    influence_conversation: true
+  contact:
+    type: text
+    influence_conversation: true
+  address:
+    type: text
+    influence_conversation: true
+  gender:
+    type: text
+    influence_conversation: true
+  dob:
+    type: text
+    influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
+  profession:
+    type: text
+    influence_conversation: true
+  hobbies:
+    type: text
+    influence_conversation: true
+  family:
+    type: text
+    influence_conversation: true
+  family_members:
+    type: text
+    influence_conversation: true
+  medical_condition:
+    type: text
+    influence_conversation: true
+  pets:
+    type: text
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+  greeting:
+    type: text
+    influence_conversation: true
+  music_language:
+    type: text
+    influence_conversation: true
+responses:
+  utter_start:
+  - text: |-
+      Hey buddy! {greeting} Welcome to the Mood Bot! I'm here to help boost your mood 
+       If you haven't signed up yet, let's start with that 😊
+    buttons:
+    - title: Signup
+      payload: /signup
+    - title: Signin
+      payload: /signin
+  utter_greet:
+  - text: |-
+      Hey buddy! {greeting} Welcome to the Mood Bot! I'm here to help boost your mood 
+       If you haven't signed up yet, let's start with that 😊
+    buttons:
+    - title: Signup
+      payload: /signup
+    - title: Signin
+      payload: /signin
+  utter_ask_mood:
+  - text: Hey! How is your mood today?😊
+    buttons:
+    - title: Happy 😀
+      payload: /mood_happy
+    - title: Sad 😢
+      payload: /mood_sad
+    - title: Bored 😐
+      payload: /mood_bored
+  utter_mood_sad:
+  - text: |-
+      Here is something to cheer you up:🤩 
+       1. Reading a favorite book (https://openlibrary.org/) 
+       2. listen to soothing music. (https://wynk.in/music) 
+       3. Reach out to a trusted friend or loved one for support. 
+       4. Engage in hobbies (Open que - fetch the hobbies from db??) 
+       5. Engage in gentle meditation or deep breathing exercises. (https://www.youtube.com/watch?v=TW2-gN9m_KQ)
+    buttons:
+    - title: let's Explore Hobbies
+      payload: /suggest_hobbies
+  utter_mood_happy:
+  - text: |-
+      Here is something to cheer you up:🤩 
+       1. Engage in light exercises like chair yoga or stretching. (https://www.youtube.com/watch?v=laIWV6qJWbk) 
+       2. Listen to their favorite music or participate in a sing-along session.(https://wynk.in/music) 
+       3. Look through old photo albums or scrapbooks to evoke happy memories. 
+       4. Engage in arts and crafts activities such as painting or coloring.(https://www.greatseniorliving.com/articles/crafts-for-seniors) 
+       5. Arrange a visit or video call with loved ones or friends.
+    buttons:
+    - title: let's Explore Hobbies
+      payload: /suggest_hobbies
+  utter_mood_bored:
+  - text: |-
+      Here is something to cheer you up:🤩 
+       1. Explore a new hobby or learn a new skill online. 
+       2. can I suggest you games (https://www.bgames.com/) 
+       3. Experiment with a new recipe or try cooking a favorite dish. 
+       4. Plan a day trip to explore nearby attractions or visit museums and art galleries.
+    buttons:
+    - title: let's Explore Hobbies
+      payload: /suggest_hobbies
+  utter_suggest_hobbies:
+  - text: Here are some of the activities you may enjoy!
+    buttons:
+    - title: Painting / Drawing
+      payload: /hobby_painting_drawing
+    - title: Reading
+      payload: /hobby_reading
+    - title: Singing
+      payload: /hobby_singing
+    - title: Dancing
+      payload: /hobby_dancing
+    - title: Travelling
+      payload: /hobby_travelling
+    - title: Nature / Gardening
+      payload: /hobby_nature_gardening
+    - title: Cooking / Baking
+      payload: /hobby_cooking_baking
+    - title: Other
+      payload: /hobby_other
+  utter_hobby_painting_drawing:
+  - text: Feeling Creative? Paint or color for some artistic fun, or join a local art class! You could also grab a drawing book and start sketching whatever pops into your head.
+  utter_hobby_reading:
+  - text: You could read a book with your favorite author and genre! Love Stories? You can also listen to an audiobook while you're out.
+  utter_hobby_singing:
+  - text: Join a choir and sing with others, or try karaoke for a fun night out! Or, learn a simple song on an instrument you love to play.
+  utter_hobby_dancing:
+  - text: Try low-impact dance classes for gentle exercise, or have a solo dance party at home! You could even invite friends over for a fun get-together.
+  utter_hobby_travelling:
+  - text: Take a day trip to a nearby attraction for a new adventure! Or, have a staycation to rediscover hidden gems in your own city.
+  utter_hobby_nature_gardening:
+  - text: Enjoy the outdoors? Go for a refreshing walk in a park! Or, try starting a little garden on your balcony by planting a new plant.
+  utter_hobby_cooking_baking:
+  - text: Foodie fun? Learn new recipes in a fun class or try cooking something delicious at home!
+  utter_hobby_other:
+  - text: We can explore learning a new language or another hobby you enjoy!
+  utter_show_recommendation:
+  - text: Do u like to Try something interesting?
+    buttons:
+    - title: Games
+      payload: /game_category
+    - title: Music
+      payload: /music
+    - title: Movies
+      payload: /movie_category
+  utter_game_category:
+  - text: choose the game category which u want play.
+    buttons:
+    - title: Puzzle
+      payload: /puzzle
+    - title: Strategy
+      payload: /strategy
+    - title: Adventure
+      payload: /adventure
+    - title: Word
+      payload: /word
+    - title: Cards
+      payload: /card
+  utter_music:
+  - text: choose any language.
+    buttons:
+    - title: Hindi
+      payload: '/hindi{{"music_language": "Hindi"}}'
+    - title: Marathi
+      payload: '/marathi{{"music_language": "Marathi"}}'
+    - title: Tamil
+      payload: '/tamil{{"music_language": "Tamil"}}'
+    - title: Punjabi
+      payload: '/punjabi{{"music_language": "Punjabi"}}'
+    - title: English
+      payload: '/english{{"music_language": "English"}}'
+  utter_music_category:
+  - text: choose ur favourite music category.
+    buttons:
+    - title: Classical Music(Old)
+      payload: /classical_music_old
+    - title: Classical Music(New)
+      payload: /classical_music_new
+    - title: Romantic Music(Old)
+      payload: /romantic_music_old
+    - title: Romantic Music(New)
+      payload: /romantic_music_new
+    - title: Road Trip Music(Old)
+      payload: /road_trip_music_old
+    - title: Road Trip Music(New)
+      payload: /road_trip_music_new
+    - title: Dance Music(Old)
+      payload: /dance_music_old
+    - title: Dance Music(New)
+      payload: /dance_music_new
+    - title: Sad Music(Old)
+      payload: /sad_music_old
+    - title: Sad Music(New)
+      payload: /sad_music_new
+  utter_movie_category:
+  - text: choose ur favourite movie genre.
+    buttons:
+    - title: Drama
+      payload: /drama
+    - title: Thriller
+      payload: /thriller
+    - title: Musical
+      payload: /musical
+    - title: Family
+      payload: /family
+    - title: Horror
+      payload: /horror
+    - title: Comedy
+      payload: /comedy
+
+  utter_affirm:
+  - text: You can Restart the conversation by signin and explore exciting activities😊.
+  utter_mood_great:
+  - text: Thank you for your feedback! It means a lot😊. Anything else you want?
+    buttons:
+    - title: Yes👍
+      payload: /affirm
+    - title: No👎
+      payload: /deny
+  utter_mood_unhappy:
+  - text: Thank you for your feedback! It means a lot. I'll work on improving my suggestions😊.
+    buttons:
+    - title: Yes👍
+      payload: /affirm
+    - title: No👎
+      payload: /deny
+  utter_deny:
+  - text: ok, Have a Nice day.
+  utter_iamabot:
+  - text: Hello! I'm your friendly Mood Bot here to brighten your day. Ask for mood-boosting tips or share your feelings! 😊
+  utter_goodbye:
+  - text: Goodbye!
+  utter_mood:
+  - text: I'm not sure how to respond to that mood.
+  utter_ask_name:
+  - text: What is your name ? (Enter ur first name and last name)
+  utter_ask_username:
+  - text: Great to have you here😄. Could you share a username ? (combo of upper & lower char(A-Za-z),a number(0-9))
+  utter_ask_contact:
+  - text: Nice choice 🥰 Can you share your contact number (only 10 digits)?
+  utter_ask_address:
+  - text: Where do you live?(Address) No worries, just curious! 🏡
+  utter_ask_gender:
+  - text: What is your gender ?
+    buttons:
+    - title: Female👵
+      payload: Female
+    - title: Male👴
+      payload: Male
+  utter_ask_dob:
+  - text: What is your Date of Birth (DD/MM/YYYY)?
+  utter_ask_email:
+  - text: Enter your email ? (ex john12@gmail.com)
+  utter_ask_profession:
+  - text: What is your profession ?
+  utter_ask_hobbies:
+  - text: What makes you happy?Can you share your hobbies🎤🎨 ?
+  utter_ask_family:
+  - text: Do live with your family ?
+    buttons:
+    - title: Yes i live with my family👍
+      payload: Yes
+    - title: No i don't live with my family👎
+      payload: No
+  utter_ask_family_members:
+  - text: How many members you have in your family?Just curious!
+  utter_ask_medical_condition:
+  - text: Do you have any Medical Condition?
+    buttons:
+    - payload: Blood Pressure(BP)
+      title: Blood Pressure(BP)
+    - payload: Diabetes
+      title: Diabetes
+    - payload: Heart Problem
+      title: Heart Problem❤‍🩹
+    - payload: other
+      title: other
+  utter_ask_pets:
+  - text: Do you have any pet 🐾?
+    buttons:
+    - title: Yes👍
+      payload: Yes
+    - title: No👎
+      payload: No
+  utter_ask_password:
+  - text: Enter new password (combo of upper & lower char(A-Za-z), A number (0-9) and/or special symbol)?
+  utter_Do_live_with_family:
+  - text: |-
+      Hey since you live with your family, here are some exciting activities you can do together:
+       1.Play board games or have a family game night.
+       2.Relive happy memories together by looking through photos and videos.
+       3.Plan a family outing or picnic for some quality time.
+       4.You could also try a new recipe together or have a movie marathon with your favorite snacks!
+  utter_DoNot_live_with_family:
+  - text: |-
+      No problem. Here are some fun activities you can do on your own:
+       1.Take a relaxing bath with a good book.
+       2.Learn a new skill you've always been interested in.
+       3.Binge-watch your favorite show.
+       4.Maybe you could try a virtual game night with friends or family online?
+  utter_Do_have_pets:
+  - text: |-
+      That's great! Here are some activities you can enjoy with your furry friend:
+       1.Take short walks or visit pet-friendly parks.
+       2.Brush your pet and spend quality time together.
+       3.Play some fun indoor games designed for pets (based on pet type if available). We can even find some ideas online together!
+  utter_DoNot_have_pets:
+  - text: |-
+      No worries, You can still enjoy activities like:
+       1.Gardening (be sure to choose pet-safe plants!)
+       2.Birdwatching
+       3.Volunteering at animal shelters.
+       4.Perhaps horseback riding or fostering animals could be interesting options for you?
+  utter_Blood_Pressure_(BP):
+  - text: |-
+      Remember to check your BP regularly.
+       1.You can also set reminders on your phone to help you stay on track.
+       2.Disclaimer: And consult your doctor if you have any concerns.
+
+  utter_Diabetes:
+  - text: |-
+      Don't forget to take your medication today!
+       1.You can also find healthy recipe websites and apps to manage your diabetes.
+       2.Disclaimer: As always, consult your doctor for personalized advice.
+
+  utter_Heart_Problem:
+  - text: |-
+      It's important to prioritize activities that are safe for your heart.
+       1.Did you know gentle exercises like walking or yoga can be very beneficial?
+       2.Disclaimer: Consult your doctor for personalized recommendations.
+
+  utter_Other:
+  - text: |-
+      I'm still learning about various medical conditions.
+       1.Disclaimer: It's important to consult your doctor for specific advice.
+       
+
+  utter_feedback:
+  - text: How was your experience with the MyBotBuddy? Did you enjoy it? 😊
+    buttons:
+    - title: Good😀
+      payload: /mood_great
+    - title: Not so Good😢
+      payload: /mood_unhappy
+
+actions:
+- action_classical_music_new
+- action_classical_music_old
+- action_dance_music_new
+- action_dance_music_old
+- action_sad_music_new
+- action_sad_music_old
+- action_game_category_adventure
+- action_game_category_card
+- action_game_category_puzzle
+- action_game_category_strategy
+- action_game_category_word
+- action_hobby_cooking_baking
+- action_hobby_dancing
+- action_hobby_nature_gardening
+- action_hobby_other
+- action_hobby_painting_drawing
+- action_hobby_reading
+- action_hobby_singing
+- action_hobby_travelling
+- action_movie_category_comedy
+- action_movie_category_drama
+- action_movie_category_family
+- action_movie_category_horror
+- action_movie_category_musical
+- action_movie_category_thriller
+- action_road_trip_music_new
+- action_road_trip_music_old
+- action_romantic_music_new
+- action_romantic_music_old
+- action_family_recommend
+- action_medical_condition_recommend
+- action_pet_recommend
+- generate_greeting_action
+- registration_form_action
+- signin_form_action
+- utter_affirm
+- utter_deny
+- utter_game_category
+- utter_goodbye
+- utter_hobby_cooking_baking
+- utter_hobby_dancing
+- utter_hobby_nature_gardening
+- utter_hobby_other
+- utter_hobby_painting_drawing
+- utter_hobby_reading
+- utter_hobby_singing
+- utter_hobby_travelling
+- utter_mood_bored
+- utter_mood_great
+- utter_mood_happy
+- utter_mood_sad
+- utter_movie_category
+- utter_music
+- utter_music_category
+- utter_show_recommendation
+- utter_start
+- utter_suggest_hobbies
+- utter_Do_live_with_family
+- utter_DoNot_live_with_family
+- utter_Do_have_pets
+- utter_DoNot_have_pets
+- utter_Blood_Pressure_(BP)
+- utter_Diabetes
+- utter_Heart_Problem
+- utter_Other
+- utter_feedback
+forms:
+  registration_form:
+    required_slots:
+      name:
+      - type: from_text
+        intent: name
+      username:
+      - type: from_text
+      password:
+      - type: from_text
+      contact:
+      - type: from_text
+      address:
+      - type: from_text
+      gender:
+      - type: from_text
+      dob:
+      - type: from_text
+      email:
+      - type: from_text
+      profession:
+      - type: from_text
+      hobbies:
+      - type: from_text
+      family:
+      - type: from_text
+      family_members:
+      - type: from_text
+      medical_condition:
+      - type: from_text
+      pets:
+      - type: from_text
+    signin_form:
+      required_slots:
+        username:
+        - type: from_text
+        password:
+        - type: from_text

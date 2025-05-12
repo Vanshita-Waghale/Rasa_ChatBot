@@ -1,0 +1,611 @@
+version: "2.0"
+
+stories:
+  - story: Greet and Mood - Happy
+    steps:
+        - intent: greet
+        - action: utter_start
+        - intent: signup
+        - action: registration_form_action
+        - intent: signin
+        - action: signin_form_action
+        - active_loop: signin_form_action #registration_form_action
+        - slot_was_set:
+            - requested_slot: name
+        - slot_was_set:
+            - requested_slot: username
+        - slot_was_set:
+            - requested_slot: password
+        - slot_was_set:
+            - requested_slot: contact
+        - slot_was_set:
+            - requested_slot: address
+        - slot_was_set:
+            - requested_slot: gender
+        - slot_was_set:
+            - requested_slot: dob
+        - slot_was_set:
+            - requested_slot: email
+        - slot_was_set:
+            - requested_slot: profession
+        - slot_was_set:
+            - requested_slot: hobbies
+        - slot_was_set:
+            - requested_slot: family
+        - slot_was_set:
+            - requested_slot: family_members
+        - slot_was_set:
+            - requested_slot: medical_condition
+        - slot_was_set:
+            - requested_slot: pets
+        - intent: start
+        - action: utter_start
+        - intent: mood_happy
+        - action: utter_mood_happy
+        - intent: mood_sad
+        - action: utter_mood_sad
+        - intent: mood_bored
+        - action: utter_mood_bored
+        - intent: mood_great
+        - action: utter_mood_great
+        - intent: mood_unhappy
+        - action: utter_mood_unhappy
+
+  - story: Affirm
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - story: Deny
+    steps:
+      - intent: deny
+      - action: utter_deny
+      - action: utter_goodbye
+
+  - story: Mood Challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - story: Hobby Selection
+    steps:
+      - intent: suggest_hobbies
+      - action: utter_suggest_hobbies
+      - intent: hobby_painting_drawing
+      - action: utter_hobby_painting_drawing
+      - action: utter_show_recommendation
+      - intent: hobby_reading
+      - action: utter_hobby_reading
+      - action: utter_show_recommendation
+      - intent: hobby_singing
+      - action: utter_hobby_singing
+      - action: utter_show_recommendation
+      - intent: hobby_dancing
+      - action: utter_hobby_dancing
+      - action: utter_show_recommendation
+      - intent: hobby_travelling
+      - action: utter_hobby_travelling
+      - action: utter_show_recommendation
+      - intent: hobby_nature_gardening
+      - action: utter_hobby_nature_gardening
+      - action: utter_show_recommendation
+      - intent: hobby_cooking_baking
+      - action: utter_hobby_cooking_baking
+      - action: utter_show_recommendation
+      - intent: hobby_other
+      - action: utter_hobby_other
+      - action: utter_show_recommendation
+      - intent: game_category
+      - action: utter_game_category
+      - intent: music
+      - action: utter_music
+      - intent: music_category
+      - action: utter_music_category
+      - intent: hindi
+        entities:
+          - music_language: Hindi
+          - slot_was_set:
+              - music_language: Hindi
+      - action: utter_music_category
+      - intent: marathi
+        entities:
+          - music_language: Marathi
+          - slot_was_set:
+              - music_language: Marathi
+      - action: utter_music_category
+      - intent: tamil
+        entities:
+          - music_language: Tamil
+          - slot_was_set:
+              - music_language: Tamil
+      - action: utter_music_category
+      - intent: punjabi
+        entities:
+          - music_language: Punjabi
+          - slot_was_set:
+              - music_language: Punjabi
+      - action: utter_music_category
+      - intent: english
+        entities:
+          - music_language: English
+          - slot_was_set:
+              - music_language: English
+      - action: utter_music_category
+      - intent: movie_category
+      - action: utter_movie_category
+      - intent: puzzle
+      - action: action_game_category_puzzle
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: strategy
+      - action: action_game_category_strategy
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: adventure
+      - action: action_game_category_adventure
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: word
+      - action: action_game_category_word
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: card
+      - action: action_game_category_card
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: classical_music_old
+      - action: action_classical_music_old
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: classical_music_new
+      - action: action_classical_music_new
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: romantic_music_old
+      - action: action_romantic_music_old
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: romantic_music_new
+      - action: action_romantic_music_new
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: road_trip_music_old
+      - action: action_road_trip_music_old
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: road_trip_music_new
+      - action: action_road_trip_music_new
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: dance_music_old
+      - action: action_dance_music_old
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: dance_music_new
+      - action: action_dance_music_new
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: sad_music_old
+      - action: action_sad_music_old
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: sad_music_new
+      - action: action_sad_music_new
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: drama
+      - action: action_movie_category_drama
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: thriller
+      - action: action_movie_category_thriller
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: family
+      - action: action_movie_category_family
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: musical
+      - action: action_movie_category_musical
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: horror
+      - action: action_movie_category_horror
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+      - intent: comedy
+      - action: action_movie_category_comedy
+      - intent: family_recommend
+      - action: action_family_recommend
+      - intent: medical_condition_recommend
+      - action: action_medical_condition_recommend
+      - intent: pet_recommend
+      - action: action_pet_recommend
+#      - action: action_family_recommend
+#      - action: action_medical_condition_recommend
+#      - action: action_pet_recommend
+
+
+  - story: interactive_story_1
+    steps:
+    - intent: start
+    - action: utter_start
+    - intent: signup
+    - action: registration_form_action
+    - active_loop: registration_form_action
+    - slot_was_set:
+      - requested_slot: name
+    - slot_was_set:
+      - name: Vanshita Waghale
+    - slot_was_set:
+      - requested_slot: username
+    - slot_was_set:
+      - username: va12
+    - slot_was_set:
+      - requested_slot: password
+    - slot_was_set:
+      - password: Va@12
+    - slot_was_set:
+      - requested_slot: contact
+    - slot_was_set:
+      - contact: '2345678912'
+    - slot_was_set:
+      - requested_slot: address
+    - slot_was_set:
+      - address: Lokmanya nagar nagpur
+    - slot_was_set:
+      - requested_slot: gender
+    - slot_was_set:
+      - gender: Female
+    - slot_was_set:
+      - requested_slot: dob
+    - slot_was_set:
+      - dob: 14/03/1960
+    - slot_was_set:
+      - requested_slot: email
+    - slot_was_set:
+      - email: va1@gmail.com
+    - slot_was_set:
+      - requested_slot: profession
+    - slot_was_set:
+      - profession: Engineer
+    - slot_was_set:
+      - requested_slot: hobbies
+    - slot_was_set:
+      - hobbies: painting,sketching
+    - slot_was_set:
+      - requested_slot: family
+    - slot_was_set:
+      - family: Yes
+    - slot_was_set:
+      - requested_slot: family_members
+    - slot_was_set:
+      - family_members: '5'
+    - slot_was_set:
+      - requested_slot: medical_condition
+    - slot_was_set:
+      - medical_condition: Heart Problem
+    - slot_was_set:
+      - requested_slot: pets
+    - slot_was_set:
+      - pets: Yes
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - intent: mood_sad
+    - action: utter_mood_sad
+    - intent: mood_great
+    - action: utter_mood_great
+    - intent: affirm
+    - action: utter_affirm
+    - intent: goodbye
+    - action: utter_goodbye
+    - intent: deny
+    - action: utter_deny
+    - action: utter_goodbye
+
+  - story: interactive_story_1
+    steps:
+    - intent: start
+    - action: utter_start
+    - intent: signin
+    - action: signin_form_action
+    - active_loop: signin_form_action
+    - slot_was_set:
+      - requested_slot: username
+    - slot_was_set:
+      - username: 123Dhawal
+    - slot_was_set:
+      - requested_slot: password
+    - slot_was_set:
+      - password: '@123Dhawal'
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - intent: mood_happy
+    - action: utter_mood_happy
+    - intent: suggest_hobbies
+    - action: utter_suggest_hobbies
+    - intent: mood_sad
+    - action: utter_mood_sad
+    - intent: mood_bored
+    - action: utter_mood_bored
+    - intent: hobby_painting_drawing
+    - action: utter_hobby_painting_drawing
+    - action: utter_show_recommendation
+    - intent: hobby_reading
+    - action: utter_hobby_reading
+    - action: utter_show_recommendation
+    - intent: hobby_singing
+    - action: utter_hobby_singing
+    - action: utter_show_recommendation
+    - intent: hobby_dancing
+    - action: utter_hobby_dancing
+    - action: utter_show_recommendation
+    - intent: hobby_travelling
+    - action: utter_hobby_travelling
+    - action: utter_show_recommendation
+    - intent: hobby_nature_gardening
+    - action: utter_hobby_nature_gardening
+    - action: utter_show_recommendation
+    - intent: hobby_cooking_baking
+    - action: utter_hobby_cooking_baking
+    - action: utter_show_recommendation
+    - intent: hobby_other
+    - action: utter_hobby_other
+    - action: utter_show_recommendation
+    - intent: game_category
+    - action: utter_game_category
+    - intent: music
+    - action: utter_music
+    - intent: music_category
+    - action: utter_music_category
+    - intent: hindi
+      entities:
+        - music_language: Hindi
+        - slot_was_set:
+            - music_language: Hindi
+    - action: utter_music_category
+    - intent: marathi
+      entities:
+        - music_language: Marathi
+        - slot_was_set:
+            - music_language: Marathi
+    - action: utter_music_category
+    - intent: tamil
+      entities:
+        - music_language: Tamil
+        - slot_was_set:
+            - music_language: Tamil
+    - action: utter_music_category
+    - intent: punjabi
+      entities:
+        - music_language: Punjabi
+        - slot_was_set:
+            - music_language: Punjabi
+    - action: utter_music_category
+    - intent: english
+      entities:
+        - music_language: English
+        - slot_was_set:
+            - music_language: English
+    - action: utter_music_category
+    - intent: movie_category
+    - action: utter_movie_category
+    - intent: puzzle
+    - action: action_game_category_puzzle
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: strategy
+    - action: action_game_category_strategy
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: adventure
+    - action: action_game_category_adventure
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: word
+    - action: action_game_category_word
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: card
+    - action: action_game_category_card
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: classical_music_old
+    - action: action_classical_music_old
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: classical_music_new
+    - action: action_classical_music_new
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: romantic_music_old
+    - action: action_romantic_music_old
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: romantic_music_new
+    - action: action_romantic_music_new
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: road_trip_music_old
+    - action: action_road_trip_music_old
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: road_trip_music_new
+    - action: action_road_trip_music_new
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: dance_music_old
+    - action: action_dance_music_old
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: dance_music_new
+    - action: action_dance_music_new
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: sad_music_old
+    - action: action_sad_music_old
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: sad_music_new
+    - action: action_sad_music_new
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: drama
+    - action: action_movie_category_drama
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: thriller
+    - action: action_movie_category_thriller
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: family
+    - action: action_movie_category_family
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: musical
+    - action: action_movie_category_musical
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: horror
+    - action: action_movie_category_horror
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+    - intent: comedy
+    - action: action_movie_category_comedy
+    - intent: family_recommend
+    - action: action_family_recommend
+    - intent: medical_condition_recommend
+    - action: action_medical_condition_recommend
+    - intent: pet_recommend
+    - action: action_pet_recommend
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+#    - intent: hobby_painting_drawing
+#    - action: action_hobby_painting_drawing
+#    - intent: hobby_reading
+#    - action: action_hobby_reading
+#    - intent: hobby_singing
+#    - action: action_hobby_singing
+#    - intent: hobby_dancing
+#    - action: action_hobby_dancing
+#    - intent: hobby_travelling
+#    - action: action_hobby_travelling
+#    - intent: hobby_nature_gardening
+#    - action: action_hobby_nature_gardening
+#    - intent: hobby_cooking_baking
+#    - action: action_hobby_cooking_baking
+#    - intent: hobby_other
+#    - action: action_hobby_other
+
+  - story: interactive_story_1
+    steps:
+    - intent: start
+    - action: utter_start
+    - intent: signin
+    - action: signin_form_action
+    - active_loop: signin_form_action
+    - slot_was_set:
+      - requested_slot: username
+    - slot_was_set:
+      - username: 123Dhawal
+    - slot_was_set:
+      - username: 123Dhawal
+    - slot_was_set:
+      - requested_slot: password
+    - slot_was_set:
+      - password: '@123Dhawal'
+    - slot_was_set:
+      - password: '@123Dhawal'
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - intent: mood_bored
+    - action: utter_mood_bored
+    - intent: suggest_hobbies
+    - action: utter_suggest_hobbies
+    - intent: hobby_painting_drawing
+    - action: utter_hobby_painting_drawing
+    - action: utter_show_recommendation
+    - intent: music
+    - action: utter_music
+    - intent: hindi
+      entities:
+      - music_language: Hindi
+    - slot_was_set:
+      - music_language: Hindi
+    - action: utter_music_category
+    - intent: nlu_fallback
+    - action: action_classical_music_old
+    - intent: music
+    - action: utter_music
+    - intent: marathi
+      entities:
+      - music_language: Marathi
+    - slot_was_set:
+      - music_language: Marathi
+    - action: utter_music_category
+    - intent: deny
+    - action: action_classical_music_new
+    - intent: music
+    - action: utter_music
+    - intent: tamil
+      entities:
+      - music_language: Tamil
+    - slot_was_set:
+      - music_language: Tamil
+    - action: utter_music_category
+    - intent: nlu_fallback
+    - action: action_romantic_music_old
+    - intent: family_recommend
+    - action: action_family_recommend
+    - intent: medical_condition_recommend
+    - action: action_medical_condition_recommend
+    - intent: pet_recommend
+    - action: action_pet_recommend
+#    - action: action_family_recommend
+#    - action: action_medical_condition_recommend
+#    - action: action_pet_recommend
+

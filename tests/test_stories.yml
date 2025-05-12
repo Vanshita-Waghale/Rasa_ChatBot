@@ -1,0 +1,160 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+stories:
+  - story: User starts conversation with "start"
+    steps:
+       - user: |
+           start
+         intent: start
+       - action: utter_start
+
+  - story: User greets, feels happy, and says goodbye
+    steps:
+      - user: |
+          hello there!
+        intent: greet
+      - action: utter_greet
+      - user: |
+          amazing
+        intent: mood_happy
+      - action: utter_happy
+      - user: |
+          bye-bye!
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: User greets, feels happy, denies, and says goodbye
+    steps:
+      - user: |
+          hello there!
+        intent: greet
+      - action: utter_greet
+      - user: |
+          amazing
+        intent: mood_happy
+      - action: utter_happy
+      - user: |
+          not really
+        intent: deny
+      - action: utter_goodbye
+
+  - story: User greets, feels unhappy, gets cheered up, affirms, and says goodbye
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - user: |
+          not good
+        intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          yes
+        intent: affirm
+      - action: utter_happy
+      - user: |
+          bye-bye!
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: User greets, feels unhappy, gets cheered up, denies, and says goodbye
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - user: |
+          not good
+        intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          not really
+        intent: deny
+      - action: utter_goodbye
+
+  - story: User greets, feels unhappy, gets cheered up, denies, and says goodbye
+    steps:
+      - user: |
+          hi
+        intent: greet
+      - action: utter_greet
+      - user: |
+          very terrible
+        intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          no
+        intent: deny
+      - action: utter_goodbye
+
+  - story: User greets, feels bored, gets cheered up, affirms, and says goodbye
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - user: |
+          bored
+        intent: mood_bored
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          yes
+        intent: affirm
+      - action: utter_happy
+      - user: |
+          bye-bye!
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: User greets, feels bored, gets cheered up, denies, and says goodbye
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - user: |
+          bored
+        intent: mood_bored
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          not really
+        intent: deny
+      - action: utter_goodbye
+
+  - story: User greets, feels very terrible, denies, and says goodbye
+    steps:
+      - user: |
+          hi
+        intent: greet
+      - action: utter_greet
+      - user: |
+          very terrible
+        intent: mood_bored
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - user: |
+          no
+        intent: deny
+      - action: utter_goodbye
+
+  - story: User says goodbye
+    steps:
+      - user: |
+          bye-bye!
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: User asks if it's a bot
+    steps:
+      - user: |
+          are you a bot?
+        intent: bot_challenge
+      - action: utter_iamabot
+
+
+

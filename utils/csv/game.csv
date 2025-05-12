@@ -1,0 +1,22 @@
+GameCategory,GameTitle,Source,mood
+Puzzle,Sudoku,https://sudoku.com/,bored
+Puzzle,Mahjong,https://mahjon.gg/,happy
+Puzzle,Crossword,https://www.boatloadpuzzles.com/playcros,sad
+Puzzle,Minesweeper,minesweeperonline.com,happy
+Puzzle,Memory Match,https://www.mathsisfun.com/games/,happy
+Puzzle,Tetris,https://tetris.com/play-tetris,bored
+Puzzle,2048,https://play2048.co/,bored
+Puzzle,Jigsaw Puzzles,https://www.jigsawplanet.com/,happy
+Strategy,Tic-Tac-Toe,https://playtictactoe.org/,sad
+Strategy,Chess,https://www.chess.com/,sad
+Strategy,Checkers,https://toytheater.com/checkers/,sad
+Adventure,Snake,https://snake.io/,bored
+Adventure,Bubble Shooter,https://www.bubbleshooter.net/,sad
+Adventure,Ludo King,https://www.crazygames.com/game/ludo-king,happy
+Adventure,Pac-Man,https://www.pacman1.net/,happy
+Adventure,Pinball,https://playpager.com/pinball-online/,happy
+Card,Spider Solitaire,https://solitaired.com/spider-solitaire,bored
+Card,Poker,https://www.247freepoker.com/,bored
+Word,Word Association,https://humanbraincloud.com/,sad
+Word,Word Scramble,https://play.dictionary.com/games/wo,sad
+Word,Hangman,https://poki.com/en/g/hangman,bored

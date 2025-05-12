@@ -1,0 +1,137 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Heart Problem
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Va@12
+    - 2345678912
+    - Lokmanya nagar nagpur
+    - 14/03/1960
+    - Engineer
+    - 5
+    - New
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - Female
+    - va1@gmail.com
+    - painting,sketching
+    - hobby_painting_drawing
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: mood_happy
+  examples: |
+    - happy
+    - I'm happy
+    - I am happy
+- intent: mood_sad
+  examples: |
+    - sad
+    - I'm sad
+    - I am sad
+- intent: mood_bored
+  examples: |
+    - bored
+    - I'm bored
+    - I am bored
+- intent: signup
+  examples: |
+    - signup
+    - sign up
+- intent: signin
+  examples: |
+    - signin
+    - sign in
+    - [123Dhawal](username)
+    - [@123Dhawal](password)
+    - [123Dhawal](username)
+    - [@123Dhawal](password)
+- intent: nlu_fallback
+  examples: |
+    - Vanshita Waghale
+    - va12
+    - Old
+- intent: music
+  examples: |
+    - [hindi](music_language)
+    - [marathi](music_language
+    - [tamil](music_language
+    - [punjabi](music_language
+    - [english](music_language

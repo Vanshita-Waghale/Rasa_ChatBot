@@ -1,0 +1,57 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# PyCharm project files
+.idea/
+*.iml
+
+# Coverage and test output
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Logs and temporary files
+*.log
+logs/
+
+# SQLite and local DBs
+*.db
+*.sqlite3
+
+# Trained Rasa models (optional)
+models/
+*.tar.gz
+
+# System files
+.DS_Store
+Thumbs.db

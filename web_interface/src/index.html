@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reminder Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reminder-interface">
+    <div class="reminder-row">
+      <input type="time" id="reminderTime" value="00:00">
+      <button class="btn-set-reminder" onclick="setTimedReminder()">Set Reminder</button>
+    </div>
+    <div class="reminder-row">
+      <input type="text" id="reminderName" placeholder="Enter reminder name">
+    </div>
+    <div class="reminder-controls">
+      <button class="btn-snooze" onclick="snoozeReminder()">Snooze</button>
+      <button class="btn-turn-off" onclick="turnOffReminder()">Turn Off</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
