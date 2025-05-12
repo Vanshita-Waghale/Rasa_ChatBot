@@ -1,5 +1,3 @@
----
-
 # MyBotBuddy - Chatbot for Elderly Well-being
 
 ## 📌 Introduction
@@ -169,6 +167,4 @@ UPDATE users SET mood='sad' WHERE name='Alice';
 ## 📜 License
 
 Open-source project. Free to use and contribute.
-
----
 
